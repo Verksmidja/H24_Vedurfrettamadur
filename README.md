@@ -1,0 +1,1 @@
+# VESM3_Loka_verkefni
