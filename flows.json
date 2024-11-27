@@ -1,0 +1,727 @@
+[
+    {
+        "id": "d9e1b621c7fb1d0f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0ed41227d9f6b763",
+        "type": "ui_colour_picker",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "label": "Auga 1",
+        "group": "8574bfbbad3e50b9",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "d89a8f97d82deb0b"
+            ]
+        ]
+    },
+    {
+        "id": "23a28ded063e4ee8",
+        "type": "mqtt out",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Mqtt OUT",
+        "topic": "0307LOKA",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "19b92443be8734c7",
+        "x": 960,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d89a8f97d82deb0b",
+        "type": "function",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Auga 1",
+        "func": "msg.payload.name = 'auga_1';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "477acb1395ff2dee"
+            ]
+        ]
+    },
+    {
+        "id": "477acb1395ff2dee",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Augu",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "23a28ded063e4ee8",
+                "f41582aa131a5d11"
+            ]
+        ]
+    },
+    {
+        "id": "f41582aa131a5d11",
+        "type": "debug",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4987efe64acafd96",
+        "type": "ui_colour_picker",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "label": "Auga 2",
+        "group": "8574bfbbad3e50b9",
+        "format": "rgb",
+        "outformat": "object",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "11dc216c79a7f858"
+            ]
+        ]
+    },
+    {
+        "id": "11dc216c79a7f858",
+        "type": "function",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Auga 2",
+        "func": "msg.payload.name = 'auga_2';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "477acb1395ff2dee"
+            ]
+        ]
+    },
+    {
+        "id": "b1ce3d5726bac5fb",
+        "type": "ui_switch",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Sena",
+        "label": "Kveikja á Senu",
+        "tooltip": "",
+        "group": "01247ab37e62f5a4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "b7ae875d46e086a1"
+            ]
+        ]
+    },
+    {
+        "id": "b7ae875d46e086a1",
+        "type": "function",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Sena",
+        "func": "msg.payload.name = \"Sena\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "1147a1f748e8e1db"
+            ]
+        ]
+    },
+    {
+        "id": "f4078d2842f68b25",
+        "type": "ui_slider",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Hægri Hreyfa",
+        "label": "Hægri Hreyfa",
+        "tooltip": "",
+        "group": "55de730c8157964a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "9cdfee68a0e9d109",
+                "877b95bc54b237c1"
+            ]
+        ]
+    },
+    {
+        "id": "1147a1f748e8e1db",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Sena",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 650,
+        "y": 280,
+        "wires": [
+            [
+                "23a28ded063e4ee8",
+                "05e7a3d5522c410c"
+            ]
+        ]
+    },
+    {
+        "id": "7e7e6045bca8df7a",
+        "type": "ui_slider",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Hægri Hraði",
+        "label": "Hægri Hraði",
+        "tooltip": "",
+        "group": "c74fac653fe9486d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "cedf0d1e83af1d13",
+                "c3ab95f4d3d59699"
+            ]
+        ]
+    },
+    {
+        "id": "ae0aa3e16cb28823",
+        "type": "ui_slider",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Vinstri Hreyfa",
+        "label": "Vinstri Hreyfa",
+        "tooltip": "",
+        "group": "62ef9a207ee1b842",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "3377fbbdef3e6fd7",
+                "62b358273144185d"
+            ]
+        ]
+    },
+    {
+        "id": "b8e7e7d57ef01640",
+        "type": "ui_slider",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Vinstri Hraði",
+        "label": "Vinstri Hraði",
+        "tooltip": "",
+        "group": "5d4ac42378326aef",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "d9fde33e23346c8d",
+                "6131d80b4f13a102"
+            ]
+        ]
+    },
+    {
+        "id": "9cdfee68a0e9d109",
+        "type": "ui_gauge",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Gauge",
+        "group": "55de730c8157964a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Hægri Hreyfa",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cedf0d1e83af1d13",
+        "type": "ui_gauge",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Gauge",
+        "group": "c74fac653fe9486d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Hægri Hraði",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3377fbbdef3e6fd7",
+        "type": "ui_gauge",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Gauge",
+        "group": "62ef9a207ee1b842",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vinstri Hreyfa",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d9fde33e23346c8d",
+        "type": "ui_gauge",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Gauge",
+        "group": "5d4ac42378326aef",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vinstri Hraði",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 350,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "05e7a3d5522c410c",
+        "type": "debug",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6131d80b4f13a102",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "580dc71a79a4925d"
+            ]
+        ]
+    },
+    {
+        "id": "62b358273144185d",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 640,
+        "wires": [
+            [
+                "68c5d731448e812f"
+            ]
+        ]
+    },
+    {
+        "id": "c3ab95f4d3d59699",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 480,
+        "wires": [
+            [
+                "0c718a1fb3a2e7db"
+            ]
+        ]
+    },
+    {
+        "id": "877b95bc54b237c1",
+        "type": "json",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "e9da4da087f43c88"
+            ]
+        ]
+    },
+    {
+        "id": "e9da4da087f43c88",
+        "type": "mqtt out",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Hægri Hreyfa",
+        "topic": "0307HM",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "19b92443be8734c7",
+        "x": 530,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0c718a1fb3a2e7db",
+        "type": "mqtt out",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Hægri Hraði",
+        "topic": "0307HS",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "19b92443be8734c7",
+        "x": 530,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "68c5d731448e812f",
+        "type": "mqtt out",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Vinstri Hreyfa",
+        "topic": "0307VM",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "19b92443be8734c7",
+        "x": 540,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "580dc71a79a4925d",
+        "type": "mqtt out",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Vinstri Hraði",
+        "topic": "0307VS",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "19b92443be8734c7",
+        "x": 530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d0224f2bf8b07ffc",
+        "type": "comment",
+        "z": "d9e1b621c7fb1d0f",
+        "name": "Topic Upplýsingar",
+        "info": "Topic'in byrja öll á 0307 \nog svo annað hvort\nH = Hægri\nV = Vinstri\nsvo er seinasti stafurinn annað hvort\nM = Hreyfa (Move)\nS = Hraði (Speed)",
+        "x": 550,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8574bfbbad3e50b9",
+        "type": "ui_group",
+        "name": "Augu",
+        "tab": "77dfcab81b7b16fb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "19b92443be8734c7",
+        "type": "mqtt-broker",
+        "name": "emqx",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "01247ab37e62f5a4",
+        "type": "ui_group",
+        "name": "Sena",
+        "tab": "77dfcab81b7b16fb",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "55de730c8157964a",
+        "type": "ui_group",
+        "name": "Hægri Hreyfa",
+        "tab": "77dfcab81b7b16fb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c74fac653fe9486d",
+        "type": "ui_group",
+        "name": "Hægri Hraði",
+        "tab": "77dfcab81b7b16fb",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62ef9a207ee1b842",
+        "type": "ui_group",
+        "name": "Vinstri Hreyfa",
+        "tab": "77dfcab81b7b16fb",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5d4ac42378326aef",
+        "type": "ui_group",
+        "name": "Vinstri Hraði",
+        "tab": "77dfcab81b7b16fb",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "77dfcab81b7b16fb",
+        "type": "ui_tab",
+        "name": "Input",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
