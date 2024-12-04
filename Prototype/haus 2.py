@@ -46,9 +46,11 @@ def do_connect():
     print('network config:', wlan.ifconfig())
     
 do_connect()
-
+#stilli i_gangi breytuna
+global i_gangi
 i_gangi = False
-dht22 = dht.DHT22(machine.Pin(10))
+
+dht22 = dht.DHT22(machine.Pin(1))
 
 # Klasi fyrir mótorana
 # Heldur utan um minnst og mest sem mótor getur hreyft
@@ -149,16 +151,16 @@ async def skynjari():
         #print("Temperature: {:.1f}°C".format(temperature))
         print("Humidity: {:.1f}%".format(raki))
 
+        #Ef að rakinn er hár og senan er ekki í gangi þá keyrir hann senuna
+        if raki > 70 and i_gangi == False:
+            #runna start dæminu
+            asyncio.create_task(sena1("skynjari", raki))
+            humidity = raki
+        #await asyncio.sleep(2)  # You need a little wait for stable readings
+
     except OSError as e:
         print("Failed to read sensor data:", e)
     
-    #Ef að rakinn er hár og senan er ekki í gangi þá keyrir hann senuna
-    if raki > 70 and i_gangi == False:
-        #runna start dæminu
-        asyncio.create_task(sena1("skynjari", raki))
-        humidity = raki
-    #await asyncio.sleep(2)  # You need a little wait for stable readings
-
 async def sena_humidity(humidity):
     asyncio.create_task(spila_hljod(1,3))
     
@@ -194,7 +196,7 @@ async def sena_vedur(vedur, hitastig):
 def fekk_skilabod(topic, skilabod):
     # Stilli global variables fyrir veður gögnin, léttara þannig
     
-global API_Data, hitastig, humidity, vedur, i_gangi
+    global API_Data, hitastig, humidity, vedur, i_gangi
     # Breyta skilaboði og topic úr bytes í eitthvað lesanlegt t.d. int, str
     
     
@@ -277,3 +279,4 @@ async def main():
 # Starta program
 
 asyncio.run(main())
+
