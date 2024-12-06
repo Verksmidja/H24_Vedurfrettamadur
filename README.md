@@ -1,11 +1,14 @@
 # VESM3_Loka_verkefni
 
-## Nemendur
+### Nemendur
 Daníel Snær Rodriguez
 Erpur Þórhallsson
 Pétur Jónsson
 
-## Kennari
+### Kennari
 Gunnar Þórunnarson
 
-Beinagrind með hátalara, rakaskynjara og kassi með LED skjá
+
+### Íhlutir
+
+..* Mótor
