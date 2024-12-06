@@ -11,4 +11,4 @@ Gunnar Þórunnarson
 
 ### Íhlutir
 
-..* Mótor
+* Mótor
