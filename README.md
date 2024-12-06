@@ -1,12 +1,12 @@
 # VESM3_Loka_verkefni
 
 ### Nemendur:
-Daníel Snær Rodriguez
-Erpur Þórhallsson
-Pétur Jónsson
+* Daníel Snær Rodriguez
+* Erpur Þórhallsson
+* Pétur Jónsson
 
 ### Kennari:
-Gunnar Þórunnarson
+* Gunnar Þórunnarson
 
 
 ### Íhlutir
@@ -21,3 +21,9 @@ Gunnar Þórunnarson
 * Hita skynjari
 
 ### 
+
+<dl>
+  <dt>Íhlutir</dt>
+  <dd>ESP32</dd>
+  <dd><2 Rasperry Pi/dd>
+</dl>
