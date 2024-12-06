@@ -5,6 +5,14 @@
 * Erpur Þórhallsson
 * Pétur Jónsson
 
+<dl>
+  <dt>Nemendur</dt>
+  <dd>Daníel Snær Rodriguez</dd>
+  <dd>Erpur Þórhallsson</dd>
+  <dd>Pétur Jónsson</dd>
+</dl>
+
+
 ### Kennari:
 * Gunnar Þórunnarson
 
@@ -25,5 +33,5 @@
 <dl>
   <dt>Íhlutir</dt>
   <dd>ESP32</dd>
-  <dd><2 Rasperry Pi/dd>
+  <dd>2 Rasperry Pi/dd>
 </dl>
