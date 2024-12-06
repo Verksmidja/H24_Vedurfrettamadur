@@ -2,18 +2,9 @@
 
 ### Nemendur:
 * Daníel Snær Rodriguez
-** asd
-** asd
 * Erpur Þórhallsson
 * Pétur Jónsson
-
-<dl>
-  <dt>Nemendur</dt>
-  <dd>Daníel Snær Rodriguez</dd>
-  <dd>Erpur Þórhallsson</dd>
-  <dd>Pétur Jónsson</dd>
-</dl>
-
+  
 
 ### Kennari:
 * Gunnar Þórunnarson
@@ -30,10 +21,7 @@
 * 2 RGB LED
 * Hita skynjari
 
-### 
 
-<dl>
-  <dt>Íhlutir</dt>
-  <dd>ESP32</dd>
-  <dd>2 Rasperry Pi/dd>
-</dl>
+## Kóði
+
+
