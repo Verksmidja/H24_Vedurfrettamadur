@@ -21,6 +21,6 @@ sudo ./rgb-matrix.sh
 * sudo pi@10.201.48.114
 * password 'Verksm1dja'
 
-most comon comands 
+#### most comon comands 
 pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
