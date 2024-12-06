@@ -1,6 +1,13 @@
-# 64x64 screan 
+64x64 screan 
 
-ip 
+ip 10.201.48.114
+
+script to download libarary for the screan 
+curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh > rgb-matrix.sh
+
+comand to set up liberary 
+sudo ./rgb-matrix.sh
+
 
 
 
