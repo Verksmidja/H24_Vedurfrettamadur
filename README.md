@@ -2,6 +2,8 @@
 
 ### Nemendur:
 * Daníel Snær Rodriguez
+** asd
+** asd
 * Erpur Þórhallsson
 * Pétur Jónsson
 
