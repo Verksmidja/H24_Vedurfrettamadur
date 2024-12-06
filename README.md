@@ -1,11 +1,11 @@
 # VESM3_Loka_verkefni
 
-### **Nemendur**
+### Nemendur:
 Daníel Snær Rodriguez
 Erpur Þórhallsson
 Pétur Jónsson
 
-### **Kennari**
+### Kennari:
 Gunnar Þórunnarson
 
 
@@ -17,4 +17,7 @@ Gunnar Þórunnarson
 * Hátalari
 * DF Player
 * 4 Servo mótor
-* .
+* 2 RGB LED
+* Hita skynjari
+
+### 
