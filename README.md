@@ -11,4 +11,10 @@ Gunnar Þórunnarson
 
 ### Íhlutir
 
-* Mótor
+* ESP32
+* 2 Rasperry Pi
+* 64x64 LED skjár
+* Hátalari
+* DF Player
+* 4 Servo mótor
+* .
