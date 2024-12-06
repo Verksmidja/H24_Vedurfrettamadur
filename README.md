@@ -24,7 +24,7 @@
 
 ## Kóði
 
-'''python
+```python
 import paho.mqtt.client as mqtt
 import json
 import asyncio
@@ -182,4 +182,4 @@ except KeyboardInterrupt:
     print("Exiting program.")
     mqtt_client.loop_stop()
     GPIO.cleanup()
-'''
+```
