@@ -26,6 +26,13 @@
 
 ## Kóði
 
+### Hauskúpa
+```
+Kóði Hér
+```
+
+
+
 ### Skjár
 ```python
 import paho.mqtt.client as mqtt
@@ -186,3 +193,4 @@ except KeyboardInterrupt:
     mqtt_client.loop_stop()
     GPIO.cleanup()
 ```
+
