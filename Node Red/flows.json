@@ -8,6 +8,269 @@
         "env": []
     },
     {
+        "id": "8574bfbbad3e50b9",
+        "type": "ui_group",
+        "name": "Augu og Sena",
+        "tab": "77dfcab81b7b16fb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "19b92443be8734c7",
+        "type": "mqtt-broker",
+        "name": "emqx",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "01247ab37e62f5a4",
+        "type": "ui_group",
+        "name": "Sena",
+        "tab": "77dfcab81b7b16fb",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "55de730c8157964a",
+        "type": "ui_group",
+        "name": "Hreyfa Hendur",
+        "tab": "77dfcab81b7b16fb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c74fac653fe9486d",
+        "type": "ui_group",
+        "name": "Hægri Hraði",
+        "tab": "77dfcab81b7b16fb",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62ef9a207ee1b842",
+        "type": "ui_group",
+        "name": "Hreyfa Hauskúpu",
+        "tab": "77dfcab81b7b16fb",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5d4ac42378326aef",
+        "type": "ui_group",
+        "name": "Vinstri Hraði",
+        "tab": "77dfcab81b7b16fb",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "77dfcab81b7b16fb",
+        "type": "ui_tab",
+        "name": "Input",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "72645793c263d39a",
+        "type": "mqtt-broker",
+        "name": "Raspberry Pi",
+        "broker": "10.201.48.103",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6b59458cdb6a8494",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "42865a26b605bac1",
+        "type": "ui_group",
+        "name": "Hreyfa Kjálka",
+        "tab": "77dfcab81b7b16fb",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70d19d86f8273208",
+        "type": "ui_tab",
+        "name": "API",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e587a65820c30ad4",
+        "type": "ui_group",
+        "name": "Takki",
+        "tab": "70d19d86f8273208",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "0ed41227d9f6b763",
         "type": "ui_colour_picker",
         "z": "d9e1b621c7fb1d0f",
@@ -31,8 +294,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 400,
-        "y": 100,
+        "x": 410,
+        "y": 260,
         "wires": [
             [
                 "26a0f0505c49c2dd",
@@ -70,42 +333,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 140,
+        "x": 760,
+        "y": 300,
         "wires": []
-    },
-    {
-        "id": "4987efe64acafd96",
-        "type": "ui_colour_picker",
-        "z": "d9e1b621c7fb1d0f",
-        "name": "",
-        "label": "Vinstri Auga",
-        "group": "8574bfbbad3e50b9",
-        "format": "rgb",
-        "outformat": "object",
-        "showSwatch": true,
-        "showPicker": false,
-        "showValue": false,
-        "showHue": false,
-        "showAlpha": false,
-        "showLightness": true,
-        "square": "false",
-        "dynOutput": "true",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 400,
-        "y": 180,
-        "wires": [
-            [
-                "a532051be63f02a1",
-                "f41582aa131a5d11"
-            ]
-        ]
     },
     {
         "id": "f4078d2842f68b25",
@@ -217,22 +447,6 @@
         "className": "",
         "x": 560,
         "y": 760,
-        "wires": []
-    },
-    {
-        "id": "05e7a3d5522c410c",
-        "type": "debug",
-        "z": "d9e1b621c7fb1d0f",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 240,
         "wires": []
     },
     {
@@ -422,26 +636,8 @@
         "correl": "",
         "expiry": "",
         "broker": "72645793c263d39a",
-        "x": 750,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "6d3e73cdd917e0f7",
-        "type": "mqtt out",
-        "z": "d9e1b621c7fb1d0f",
-        "name": "",
-        "topic": "0307VA",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "72645793c263d39a",
-        "x": 750,
-        "y": 180,
+        "x": 760,
+        "y": 260,
         "wires": []
     },
     {
@@ -452,28 +648,11 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 560,
-        "y": 100,
+        "x": 570,
+        "y": 260,
         "wires": [
             [
                 "ad86b9c4bd018beb",
-                "f41582aa131a5d11"
-            ]
-        ]
-    },
-    {
-        "id": "a532051be63f02a1",
-        "type": "json",
-        "z": "d9e1b621c7fb1d0f",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 560,
-        "y": 180,
-        "wires": [
-            [
-                "6d3e73cdd917e0f7",
                 "f41582aa131a5d11"
             ]
         ]
@@ -878,107 +1057,5 @@
         "x": 740,
         "y": 1000,
         "wires": []
-    },
-    {
-        "id": "8574bfbbad3e50b9",
-        "type": "ui_group",
-        "name": "Augu og Sena",
-        "tab": "77dfcab81b7b16fb",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "72645793c263d39a",
-        "type": "mqtt-broker",
-        "name": "Raspberry Pi",
-        "broker": "10.201.48.103",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "55de730c8157964a",
-        "type": "ui_group",
-        "name": "Hreyfa Hendur",
-        "tab": "77dfcab81b7b16fb",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "42865a26b605bac1",
-        "type": "ui_group",
-        "name": "Hreyfa Kjálka",
-        "tab": "77dfcab81b7b16fb",
-        "order": 7,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "e587a65820c30ad4",
-        "type": "ui_group",
-        "name": "Takki",
-        "tab": "70d19d86f8273208",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "62ef9a207ee1b842",
-        "type": "ui_group",
-        "name": "Hreyfa Hauskúpu",
-        "tab": "77dfcab81b7b16fb",
-        "order": 6,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "77dfcab81b7b16fb",
-        "type": "ui_tab",
-        "name": "Input",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "70d19d86f8273208",
-        "type": "ui_tab",
-        "name": "API",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     }
 ]
