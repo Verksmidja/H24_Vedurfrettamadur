@@ -524,8 +524,7 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 
-### Skjár upplesingar 
-
+### Skjár upplýsingar 
 
 64x64 screan 
 
@@ -534,7 +533,7 @@ ip 10.201.48.114
 script to download libarary for the screan 
 curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh > rgb-matrix.sh
 
-comand to set up liberary 
+comand to set up library 
 sudo ./rgb-matrix.sh
 
 
@@ -552,4 +551,3 @@ sudo ./rgb-matrix.sh
 
 #### most comon comands 
 pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
-
