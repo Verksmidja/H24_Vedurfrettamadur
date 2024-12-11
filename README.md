@@ -11,8 +11,8 @@
 
 
 ### Lýsing
-þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT.
-Við bjuggum til Sena af veður kona að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá hitaskynjara tengt við hauskúpunna.
+þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT. \
+Við bjuggum til Sena af veður kona að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá hitaskynjara tengt við hauskúpunna. \
 Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red GUI sem byrjar senu og getur fært mótorana og breytt augnalit hauskúpunnar.
 
 ### Íhlutir
