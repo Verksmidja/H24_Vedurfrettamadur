@@ -50,6 +50,8 @@ import ujson
 import time
 import machine
 import dht
+from machine import Pin, PWM
+
 
 MQTT_BROKER = "10.201.48.103" 
 CLIENT_ID = hexlify(unique_id())
@@ -88,6 +90,7 @@ def do_connect():
         while not wlan.isconnected():
             pass
     print('network config:', wlan.ifconfig())
+    print("Running")
     
 do_connect()
 #stilli i_gangi breytuna
@@ -112,22 +115,17 @@ class Motor:
 
 # Klasi fyrir augun sem tekur inn peruna hjá auganu
 class Auga:
-    def __init__(self, raudur, graenn, blar):
-        self._raudur = raudur
-        self._graenn = graenn
-        self._blar = blar
+    def __init__(self, raudur_pin, graenn_pin, blar_pin, freq=1000):
+        self.freq = freq
+        self._raudur = PWM(Pin(raudur_pin), freq=freq)
+        self._graenn = PWM(Pin(graenn_pin), freq=freq)
+        self._blar = PWM(Pin(blar_pin), freq=freq)
     
-    
-    # Fall til að breyta um lit á perunni
     def breyta_lit(self, rgb):
-        
-        #rgb = [litur for litur in json.loads(rgb).values()]
-        rgb = json.loads(rgb)
-        
-        self._raudur.value(0)
-        self._graenn.value(0)
-        self._blar.value(255)
-        
+        rgb = ujson.loads(rgb)
+        self._raudur.duty_u16(int((rgb["r"] / 255) * 65535))
+        self._graenn.duty_u16(int((rgb["g"] / 255) * 65535))
+        self._blar.duty_u16(int((rgb["b"] / 255) * 65535))
 
 # Mótorarnir sjálfir
 vinstri_motor = Servo(Pin(5))
@@ -144,18 +142,13 @@ Haus = Motor(haus_motor, 0, 180, 90)
 Hals = Motor(hals_motor, 0, 180, 67)
 Kjalki = Motor(kjalki_motor, 55, 100, 65)
 
-# Auga Litir
+# Auga Litir í RGB format
+AugaH = Auga(40, 39, 41) 
+
+#Auga fyrir senuna
 Lblar = Pin(35, Pin.OUT)
 Lraudur = Pin(36, Pin.OUT)
 Lgraenn = Pin(37, Pin.OUT)
-Rraudur = Pin(41, Pin.OUT)
-Rblar = Pin(39, Pin.OUT)
-Rgraenn = Pin(40, Pin.OUT)
-
-# Augna litir í lista í RGB format
-AugaH = Auga(Rraudur, Rgraenn, Rblar)
-AugaV= Auga(Lraudur, Lgraenn, Lblar)
-
 
 # Hátalari uppsetning
 from lib.dfplayer import DFPlayer
@@ -210,8 +203,14 @@ async def sena_humidity(humidity):
     await asyncio.sleep(0.5) 
     #hreyfir hendur einu sinni fyrir hverja 10% af raka
     for i in range(int(humidity // 10)):
+        Lraudur.value(0)
+        Lblar.value(1)
+        Lgraenn.value(0)
         HondLeft.hreyfa_motor(70) 
         await asyncio.sleep(0.2)
+        Lraudur.value(0)
+        Lblar.value(0)
+        Lgraenn.value(0)
         HondLeft.hreyfa_motor(0) 
         await asyncio.sleep(0.2) 
     
@@ -224,31 +223,49 @@ async def sena_vedur(vedur, hitastig):
     global i_gangi
     await asyncio.sleep(2) 
     #Eftir því hvaða veður það er þá spilar það áhveðin hljóð
-    if vedur == "Rain":
+    if vedur == "Rain" or vedur == "Drizzle":
         asyncio.create_task(spila_hljod(3, 4))
+        Lraudur.value(1)
+        Lblar.value(0)
+        Lgraenn.value(0)
         await asyncio.sleep(0.5) 
         asyncio.create_task(spila_hljod(2, 4))
-        pass
+        
     elif vedur == "Clouds":
         asyncio.create_task(spila_hljod(3,1))
+        Lraudur.value(1)
+        Lblar.value(1)
+        Lgraenn.value(1)
         await asyncio.sleep(0.5) 
         asyncio.create_task(spila_hljod(2,1))
-        pass
+        
     elif vedur == "Clear":
         asyncio.create_task(spila_hljod(3,2))
+        Lraudur.value(1)
+        Lblar.value(0)
+        Lgraenn.value(1)
         await asyncio.sleep(0.5)
         asyncio.create_task(spila_hljod(2,2))
-        pass
+        
     elif vedur == "Snow":
         asyncio.create_task(spila_hljod(3,3))
+        
+        Lraudur.value(0)
+        Lblar.value(1)
+        Lgraenn.value(0)
         await asyncio.sleep(0.5)
         asyncio.create_task(spila_hljod(2,3))
-        pass
-    
+        
     for i in range(abs(int(hitastig))):
         HondRight.hreyfa_motor(70)
+        Lraudur.value(1)
+        Lblar.value(1)
+        Lgraenn.value(0)
         await asyncio.sleep(0.2)
-        HondRight.hreyfa_motor(25) 
+        HondRight.hreyfa_motor(25)
+        Lraudur.value(0)
+        Lblar.value(0)
+        Lgraenn.value(0)
         await asyncio.sleep(0.2)
     print("Búinn að hreyfa eftir veðri")
     i_gangi = False
@@ -297,11 +314,8 @@ def fekk_skilabod(topic, skilabod):
 
     # Breyta lit á hægri auga
     elif topic == HA_TOPIC:
+        print("RGB Hægri auga", skilabod)
         AugaH.breyta_lit(skilabod)
-        
-    # Breyta lit á hægri auga
-    elif topic == VA_TOPIC:
-        augaV.breyta_lit(skilabod)
         
     elif i_gangi == False:
         # Fær API gögn og geymir, keyrir ef X
@@ -317,7 +331,7 @@ def fekk_skilabod(topic, skilabod):
                 asyncio.create_task(sena1("api", 1))
                 print(f"Ég er að runna vegna þess að það er: {hitastig}°C")
             # Ef að það er X veður þá keyrir hann senuna
-            elif vedur in ("Rain", "Snow"):
+            elif vedur in ("Rain", "Snow", "Drizzle"):
                 asyncio.create_task(sena1("api", 1))
                 print(f"Ég er að runna vegna þess að það er: {vedur}")
 
@@ -362,6 +376,8 @@ async def main():
 # Starta program
 
 asyncio.run(main())
+
+
 ```
 
 
