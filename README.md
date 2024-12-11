@@ -562,8 +562,12 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 #### Dashboard
 
-![Dashboard](Node%20Red/Node_Red_Dashboard.png)
+![Dashboard](Skyrslu_Efni/Node_Red_Dashboard.png)
 
 #### GUI
 
-![GUI](Node%20Red/Node_Red_GUI.png)
+![GUI](Skyrslu_Efni/Node_Red_GUI.png)
+
+#### flows.json
+
+![flows.json](Node%20Red/flows.json)
