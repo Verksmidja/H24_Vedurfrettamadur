@@ -12,8 +12,8 @@
 
 ### Lýsing
 þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT. \
-Við bjuggum til Sena af veður kona að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá hitaskynjara tengt við hauskúpunna. \
-Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red GUI sem byrjar senu og getur fært mótorana og breytt augnalit hauskúpunnar.
+Við bjuggum til senu af veðurkonu að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá rakaskynjara tengt við hauskúpuna. \
+Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red Dashboard sem byrjar senuna, getur fært mótorana og breytt augnalit hauskúpunnar.
 
 ### Íhlutir
 
@@ -34,6 +34,9 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 ### Tenginar
 
 ![Tengingar](Skyrslu_Efni/tengingar.svg)
+
+### Kassi
+![Tengingar](Skyrslu_Efni/kassi.svg)
 
 
 ## Kóði
