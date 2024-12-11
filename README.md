@@ -70,7 +70,7 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 ### Vídjó af Senu
 
-![Video](Skyrslu_Efni/sena.mp4)
+https://github.com/Erpurr/VESM3_Loka_verkefni/raw/refs/heads/main/Skyrslu_Efni/sena.mp4
 
 ### Tenginar
 
