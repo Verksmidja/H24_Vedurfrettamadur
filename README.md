@@ -26,6 +26,47 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 * 2 RGB LED
 * DH22 Hita og raka skynjari
 
+### Skjár upplýsingar 
+
+64x64 screan 
+
+ip 10.201.48.114
+
+script to download libarary for the screan 
+curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh > rgb-matrix.sh
+
+comand to set up library 
+sudo ./rgb-matrix.sh
+
+
+#### Connect to Raspberry Pi with GUI
+* Download [RealVNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+* Log-in unnecessary
+* File > New Connection
+  * VNC Server: `10.201.48.144`
+  * OK
+* Password: `Verksm1dja`
+
+#### Connect to Raspberry Pi with ssh
+* sudo pi@10.201.48.114
+* password 'Verksm1dja'
+
+#### most comon comands 
+pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
+
+### Node Red
+
+#### Dashboard
+
+![Dashboard](Skyrslu_Efni/Node_Red_Dashboard.png)
+
+#### GUI
+
+![GUI](Skyrslu_Efni/Node_Red_GUI.png)
+
+#### flows.json
+
+![flows.json](Node%20Red/flows.json)
 
 ### Sena
 
@@ -546,47 +587,3 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 
-### Skjár upplýsingar 
-
-64x64 screan 
-
-ip 10.201.48.114
-
-script to download libarary for the screan 
-curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh > rgb-matrix.sh
-
-comand to set up library 
-sudo ./rgb-matrix.sh
-
-
-#### Connect to Raspberry Pi with GUI
-* Download [RealVNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
-* Log-in unnecessary
-* File > New Connection
-  * VNC Server: `10.201.48.144`
-  * OK
-* Password: `Verksm1dja`
-
-#### Connect to Raspberry Pi with ssh
-* sudo pi@10.201.48.114
-* password 'Verksm1dja'
-
-#### most comon comands 
-pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
-
-
-
-
-### Node Red
-
-#### Dashboard
-
-![Dashboard](Skyrslu_Efni/Node_Red_Dashboard.png)
-
-#### GUI
-
-![GUI](Skyrslu_Efni/Node_Red_GUI.png)
-
-#### flows.json
-
-![flows.json](Node%20Red/flows.json)
