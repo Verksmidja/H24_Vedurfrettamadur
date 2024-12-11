@@ -554,3 +554,16 @@ sudo ./rgb-matrix.sh
 
 #### most comon comands 
 pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
+
+
+
+
+### Node Red
+
+#### Dashboard
+
+![Dashboard](Node%20Red/Node_Red_Dashboard.png)
+
+#### GUI
+
+![GUI](Node%20Red/Node_Red_GUI.png)
