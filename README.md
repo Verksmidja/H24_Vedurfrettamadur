@@ -24,7 +24,7 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 * DF Player
 * 4 Servo mótor
 * 2 RGB LED
-* Hita skynjari
+* DH22 Hita og raka skynjari
 
 
 ### Sena
