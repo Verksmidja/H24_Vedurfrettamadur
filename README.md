@@ -29,7 +29,11 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 
 ### Sena
 
-![Sena](VESM3_Loka_verkefni/Skyrsluefni/sena.svg)
+![Sena](Skyrslu_Efni/sena.svg)
+
+### Tenginar
+
+![Tengingar](Skyrslu_Efni/tengingar.svg)
 
 
 ## Kóði
@@ -550,3 +554,16 @@ sudo ./rgb-matrix.sh
 
 #### most comon comands 
 pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
+
+
+
+
+### Node Red
+
+#### Dashboard
+
+![Dashboard](Node%20Red/Node_Red_Dashboard.png)
+
+#### GUI
+
+![GUI](Node%20Red/Node_Red_GUI.png)
