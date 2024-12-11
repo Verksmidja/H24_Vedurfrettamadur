@@ -29,7 +29,7 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 
 ### Sena
 
-![Sena](VESM3_Loka_verkefni/Skyrslu_Efni/sena.svg)
+![Sena](Skyrslu_Efni/sena.svg)
 
 
 ## Kóði
