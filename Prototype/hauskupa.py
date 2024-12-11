@@ -6,25 +6,6 @@ from servo import Servo
 import asyncio, json
 
 
-
-MQTT_BROKER = "10.201.48.103" 
-CLIENT_ID = hexlify(unique_id())
-
-WIFI_SSID = "TskoliVESM"
-WIFI_LYKILORD = "Fallegurhestur"
-
-# Main topic eru augu og Senu switch
-# Fyrsti stafur er annað hvort H = Hægri eða V = Vinstri
-# Annar stafur er annað hvort
-# M = Hreyfa (Move) eða S = Hraði (Speed) eða A = Auga
-MAIN_TOPIC = b"0307LOKA"
-HM_TOPIC = b"0307HM"
-VM_TOPIC = b"0307VM"
-HA_TOPIC = b"0307HA"
-LA_TOPIC = b"0307LA"
-
-
-
 # Klasi fyrir mótorana
 # Heldur utan um minnst og mest sem mótor getur hreyft
 # normal er þegar mótorinn er "venjulegur" / upprétt
@@ -53,10 +34,9 @@ class Auga:
         #rgb = [litur for litur in json.loads(rgb).values()]
         rgb = json.loads(rgb)
         
-        print("asdasdasd", rgb)
-        self._raudur.value('r')
-        self._graenn.value('g')
-        self._blar.value('b')
+        self._raudur.value(0)
+        self._graenn.value(0)
+        self._blar.value(255)
         
 
 
@@ -79,9 +59,9 @@ Kjalki = Motor(kjalki_motor, 65, 100, 65)
 Lblar = Pin(35, Pin.OUT)
 Lraudur = Pin(36, Pin.OUT)
 Lgraenn = Pin(37, Pin.OUT)
-Rraudur = Pin(40, Pin.OUT)
-Rblar = Pin(41, Pin.OUT)
-Rgraenn = Pin(39, Pin.OUT)
+Rraudur = Pin(41, Pin.OUT)
+Rblar = Pin(39, Pin.OUT)
+Rgraenn = Pin(40, Pin.OUT)
 
 # Augna litir í lista í RGB format
 AugaH = Auga(Rraudur, Rgraenn, Rblar)
@@ -124,15 +104,12 @@ def fekk_skilabod(topic, skilabod):
         HondLeft.hreyfa_motor(int(skilabod))
         
     # Breyta lit á hægri auga
-    elif topic == "0307HA":
+    if topic == "0307HA":
         
         # Breyta augnarlit
         AugaH.breyta_lit(skilabod)
-    
-    
-    elif topic == "0307VA":
         
-        augaV.breyta_lit(skilabod)
+    
 
 
 # Tekur inn file og spilar það
@@ -148,6 +125,23 @@ async def spila_hljod(file):
 
 do_connect()
 
+MQTT_BROKER = "10.201.48.103" 
+CLIENT_ID = hexlify(unique_id())
+
+WIFI_SSID = "TskoliVESM"
+WIFI_LYKILORD = "Fallegurhestur"
+
+# Main topic eru augu og Senu switch
+# Fyrsti stafur er annað hvort H = Hægri eða V = Vinstri
+# Annar stafur er annað hvort
+# M = Hreyfa (Move) eða S = Hraði (Speed) eða A = Auga
+MAIN_TOPIC = b"0307LOKA"
+HM_TOPIC = b"0307HM"
+HS_TOPIC = b"0307HS"
+VM_TOPIC = b"0307VM"
+VS_TOPIC = b"0307VS"
+HA_TOPIC = b"0307HA"
+LA_TOPIC = b"0307LA"
 
 
 mqtt_client = MQTTClient(CLIENT_ID, MQTT_BROKER, keepalive=60)
@@ -157,7 +151,9 @@ mqtt_client.connect()
 # Tengja við öll Topic
 mqtt_client.subscribe(MAIN_TOPIC)
 mqtt_client.subscribe(HM_TOPIC)
+mqtt_client.subscribe(HS_TOPIC)
 mqtt_client.subscribe(VM_TOPIC)
+mqtt_client.subscribe(VS_TOPIC)
 mqtt_client.subscribe(HA_TOPIC)
 mqtt_client.subscribe(LA_TOPIC)
 
@@ -169,12 +165,9 @@ global JSON
 # Les og sendir skilaboð
 # Beinagrind er keyrð hér
 async def main():
-        
     
     # Hvar allt gerist
-    while True:
-        
-        
+    while True:    
         # Leita af skilaboði
         mqtt_client.check_msg()
         # Bíða í 1 sec
