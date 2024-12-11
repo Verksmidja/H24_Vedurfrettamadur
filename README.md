@@ -11,7 +11,9 @@
 
 
 ### Lýsing
-
+þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á mill gögn yfir nettið 
+þar sem við bjóum til senu sem er veður kona sem er að spá veðri 
+svo erum við með node red fyrir að starta senu og til að stjórna smá atriðum eins og augum og hreifa mótora 
 
 
 ### Íhlutir
