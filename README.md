@@ -26,6 +26,10 @@
 * Hita skynjari
 
 
+### Sena
+
+![SenaVESM3_Loka_verkefni/Skyrslu efni
+/sena.svg)
 
 
 ## Kóði
