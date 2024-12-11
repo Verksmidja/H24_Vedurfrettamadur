@@ -462,7 +462,7 @@ async def publish_weather(vedur, hitastig):
 
     # Ef það er rigning
     # Prentar hitastig með upplýsingum
-    if vedur == "Rain":
+    if vedur == "Rain" or vedur "Drizzi":
         image = Image.open("/home/pi/Desktop/sun.jpeg")
         matrix.SetImage(image.convert('RGB'))
         print(f"Displaying Rain icon with temperature {hitastig}")
