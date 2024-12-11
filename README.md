@@ -70,7 +70,7 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 ### Vídjó af Senu
 
-Skyrslu_Efni/sena.MOV
+![Video](Skyrslu_Efni/sena.mp4)
 
 ### Tenginar
 
