@@ -30,7 +30,7 @@ svo erum við með node red fyrir að starta senu og til að stjórna smá atri�
 
 ### Sena
 
-![Sena](VESM3_Loka_verkefni/Skyrslu efni/sena.svg)
+![Sena](VESM3_Loka_verkefni/Skyrslu%20efni/sena.svg)
 
 
 ## Kóði
