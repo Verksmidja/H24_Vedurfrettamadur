@@ -31,6 +31,10 @@ Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir
 
 ![Sena](Skyrslu_Efni/sena.svg)
 
+### Tenginar
+
+![Tengingar](Skyrslu_Efni/tengingar.svg)
+
 
 ## Kóði
 
