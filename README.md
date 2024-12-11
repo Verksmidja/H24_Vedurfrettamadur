@@ -28,7 +28,7 @@
 
 ### Sena
 
-![SenaVESM3_Loka_verkefni/Skyrslu efni
+![Sena](VESM3_Loka_verkefni/Skyrslu efni
 /sena.svg)
 
 
