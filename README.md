@@ -64,10 +64,6 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 ![GUI](Skyrslu_Efni/Node_Red_GUI.png)
 
-#### flows.json
-
-![flows.json](Node%20Red/flows.json)
-
 ### Sena
 
 ![Sena](Skyrslu_Efni/sena.svg)
