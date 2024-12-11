@@ -72,6 +72,9 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 ![Sena](Skyrslu_Efni/sena.svg)
 
+### Vídjó af Senu
+<video src="Skyrslu_Efni/sena.MOV" width="320" height="240" controls></video>
+
 ### Tenginar
 
 ![Tengingar](Skyrslu_Efni/tengingar.svg)
