@@ -11,10 +11,9 @@
 
 
 ### Lýsing
-þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á mill gögn yfir nettið 
-þar sem við bjóum til senu sem er veður kona sem er að spá veðri 
-svo erum við með node red fyrir að starta senu og til að stjórna smá atriðum eins og augum og hreifa mótora 
-
+þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT.
+Við bjuggum til Sena af veður kona að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá hitaskynjara tengt við hauskúpunna.
+Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red GUI sem byrjar senu og getur fært mótorana og breytt augnalit hauskúpunnar.
 
 ### Íhlutir
 
