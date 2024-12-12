@@ -1,4 +1,5 @@
-# VESM3_Loka_verkefni
+# Veðurfréttamaður
+- lokaverkefni í VESM3
 
 ### Nemendur:
 * Daníel Snær Rodriguez
