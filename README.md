@@ -1,20 +1,22 @@
 # Veðurfréttamaður
-- lokaverkefni í VESM3
+lokaverkefni í VESM3
 
 ### Nemendur:
 * Daníel Snær Rodriguez
 * Erpur Þórhallsson
 * Pétur Jónsson
   
-
 ### Kennari:
 * Gunnar Þórunnarson
-
 
 ### Lýsing
 þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT. \
 Við bjuggum til senu af veðurkonu að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá rakaskynjara tengt við hauskúpuna. \
 Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red Dashboard sem byrjar senuna, getur fært mótorana og breytt augnalit hauskúpunnar.
+
+### Vídjó af Senu
+https://github.com/user-attachments/assets/e1448d1a-e0a1-444b-8aa4-96a987c1ecc9
+
 
 ### Íhlutir
 
@@ -38,7 +40,6 @@ curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/m
 
 comand to set up library 
 sudo ./rgb-matrix.sh
-
 
 #### Connect to Raspberry Pi with GUI
 * Download [RealVNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
@@ -69,11 +70,7 @@ pi@h24vesm8:~ $ sudo python3 /home/pi/Desktop/test.py
 
 ![Sena](Skyrslu_Efni/sena.svg)
 
-### Vídjó af Senu
-
-https://github.com/user-attachments/assets/e1448d1a-e0a1-444b-8aa4-96a987c1ecc9
-
-### Tenginar
+### Tengingar
 
 ![Tengingar](Skyrslu_Efni/tengingar.svg)
 
