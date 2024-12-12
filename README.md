@@ -13,6 +13,9 @@ lokaverkefni í VESM3
 þetta er IOT Verkefni þar sem við erum með hauskúpu og skjá sem senda á milli gögn yfir netið gegnum MQTT. \
 Við bjuggum til senu af veðurkonu að spá veðrinu. Hauskúpan tekur inn hitastig og humidity frá Openweather API og frá rakaskynjara tengt við hauskúpuna. \
 Svo er skjár sem tekur á móti upplýsingum frá Hauskúpunni og birtir myndir eftir veðrinu. svo höfum við Node Red Dashboard sem byrjar senuna, getur fært mótorana og breytt augnalit hauskúpunnar.
+
+<br>
+
 ![ljósmynd](https://github.com/Verksmidja/H24_Vedurfrettamadur/blob/main/mynd.jpg)
 
 ### Vídjó af Senu
